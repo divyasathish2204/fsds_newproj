@@ -4,3 +4,6 @@
 # 2.git add adc.txt # any file
 # 3.git commit -m "This is my first commit"
 # then gitrepository is created
+...
+bash init_setup.sh
+....
