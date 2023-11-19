@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from src.DimondPricePrediction.logger import logging
 from src.DimondPricePrediction.exception import CustomException
-from src.DimondPricePrediction.utils.utils import save_object
+from src.DimondPricePrediction.utils.utills import save_object
 from dataclasses import dataclass
 from src.DimondPricePrediction.utils.utills import evaluate_model
 from sklearn.linear_model import LinearRegression,Lasso,Ridge,ElasticNet
@@ -20,9 +20,9 @@ class ModelTrainer():
         try:
             logging.info("spliting dependent and independent variables from train and test datasets")
             x_train,y_train,x_test,y_test = (
-                train_arr[:,:-1]
-                train_arr[:,-1]
-                test_arr[:,:-1]
+                train_arr[:,:-1],
+                train_arr[:,-1],
+                test_arr[:,:-1],
                 test_arr[:,-1]
             )
 

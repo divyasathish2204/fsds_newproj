@@ -9,7 +9,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OrdinalEncoder,StandardScaler
-from src.DimondPricePrediction.utils.utils import save_object
+from src.DimondPricePrediction.utils.utills import save_object
 
 @dataclass
 class DataTransformationConfig:
@@ -42,8 +42,8 @@ class DataTransformation:
             # categorical_pipeline
             cat_pipeline = Pipeline(
                 steps= [
-                    ('imputer',SimpleImputer(strategy="most frequent"))
-                    ('Encoder',OrdinalEncoder([cut_categories,color_categories,clarity_categories]))
+                    ('imputer',SimpleImputer(strategy="most frequent")),
+                    ('Encoder',OrdinalEncoder([cut_categories,color_categories,clarity_categories])),
                     ('scaler',StandardScaler())
                 ]
             )
