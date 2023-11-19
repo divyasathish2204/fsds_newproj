@@ -51,4 +51,24 @@ class DataIngestion:
 
 
 
+
+
+
+
+
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
     
