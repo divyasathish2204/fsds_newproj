@@ -60,7 +60,7 @@ class DataTransformation:
             raise CustomException(e,sys)
         
 
-        def initialize_datatransformation(self,train_path,test_path):
+        def initialize_data_transformation(self,train_path,test_path):
             try:
                 train_df = pd.read_csv(train_path)
                 test_df = pd.read_csv(test_path)
