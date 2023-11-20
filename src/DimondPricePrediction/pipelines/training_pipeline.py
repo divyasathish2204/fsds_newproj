@@ -15,11 +15,11 @@ import pandas as pd
 
 obj=DataIngestion()
 
-train_data_path,test_data_path=obj.initiate_data_ingestion()
+train_path,test_path=obj.initiate_data_ingestion()
 
 data_transformation=DataTransformation()
 
-train_array,test_array=data_transformation.initialize_data_transformation(train_data_path,test_data_path)
+train_array,test_array=data_transformation.initialize_data_transformation(train_path,test_path)
 
 
 model_trainer_obj=ModelTrainer()

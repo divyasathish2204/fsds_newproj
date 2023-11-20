@@ -10,8 +10,8 @@ from pathlib import Path
 
 class DataIngestionConfig:
     raw_data_path:str = os.path.join("artifacts","raw.csv")
-    train_data_path:str = os.path.join("artifacts","train.csv")
-    test_data_path:str = os.path.join("artifacts","test.csv")
+    train_path:str = os.path.join("artifacts","train.csv")
+    test_path:str = os.path.join("artifacts","test.csv")
 
 
 class DataIngestion:
@@ -30,13 +30,13 @@ class DataIngestion:
 
             train_data,test_data = train_test_split(data,test_size=0.25)
             logging.info("train,test data split completed")
-            train_data.to_csv(self.ingestion_config.train_data_path,index=False)
-            test_data.to_csv(self.ingestion_config.test_data_path,index=False)
+            train_data.to_csv(self.ingestion_config.train_path,index=False)
+            test_data.to_csv(self.ingestion_config.test_path,index=False)
             logging.info("data ingestion completed")
 
             return(
-                self.ingestion_config.train_data_path,
-                self.ingestion_config.test_data_path
+                self.ingestion_config.train_path,
+                self.ingestion_config.test_path
             )
         except Exception as e:
             print("exception occured during data ingestion stage")
