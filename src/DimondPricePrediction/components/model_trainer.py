@@ -16,7 +16,7 @@ class ModelTrainer():
     def _init_(self):
         self.model_trainer_config = Modeltrainerconfig()
 
-    def initiate_modeltraining(self,train_arr,test_arr):
+    def initiate_model_training(self,train_arr,test_arr):
         try:
             logging.info("spliting dependent and independent variables from train and test datasets")
             x_train,y_train,x_test,y_test = (
